@@ -1,0 +1,143 @@
+body {
+    position: relative;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+}
+
+.overlay {
+    background: url("../images/bg.jpg") no-repeat center/cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.navbar {
+    background-color: #dec9c3;
+    opacity: 0.8;
+}
+
+.nav-link, .navbar-brand {
+    color: #4f4f4f;
+}
+
+.navbar-brand:hover {
+    text-shadow: 1px 1px 5px white;
+}
+
+.nav-pills > li > a.active {
+    background-color: #f1efed !important;
+}
+
+.nav-link:hover {
+    background-color: #e9ddda;
+}
+
+
+.img-b {
+    border: 10px solid red;
+    border-radius: 5px;
+    transition: 3s ease-in-out;
+}
+
+
+.about img {
+    transition: transform 4s ease-in-out;
+}
+
+
+.about img:hover {
+    transform: rotate(360deg);
+}
+
+.about h1:hover,
+.portfolio h1:hover,
+.team h1:hover{
+    transition-property: font-weight, text-shadow, color;
+    transition-duration: 1s, 3s, 5s;
+    transition-timing-function: ease-out, linear, ease-in;
+
+    font-weight: bold;
+    text-shadow: 1px 7px 10px #ffc107;
+    color:#adb5bd;
+}
+
+.portfolio img {
+    transition: transform 4s ease-in-out;
+    transform: scale(1);
+}
+
+.portfolio img:hover {
+    transform: scale(0.95);
+    transition: transform 4s ease-in-out;
+
+    transition-property: border-color, border-radius, border;
+    transition-duration: 0.5s, 0.2s, 1.5s;
+    transition-timing-function: ease-out, linear, ease-in;
+
+    border: 10px solid #ffd9bd;
+    border-radius: 80px;
+}
+
+.team, .team-item {
+    position: relative;
+}
+
+.team-des {
+    background-color: #dec9c3;
+    position: absolute;
+    text-align: center;
+    bottom: 24px;
+    width: 89%;
+    border-top-right-radius: 93%;
+    transition: 0.3s ease-in-out;
+}
+
+.team-item:hover .team-des {
+    height: calc(100% - 24px);
+    background-color: #dec9c3;
+    opacity: 0.4;
+    padding: 2rem;
+    border-top-right-radius: 0;
+}
+
+#name, #tel {
+    border-color: white;
+    width: 1%;
+}
+
+#email {
+    border-color: white;
+    width: 1%;
+    float: right;
+}
+
+#comment {
+    opacity: 0;
+    height: 0;
+}
+
+
+#contact:hover #name, #contact:hover #email, #contact:hover #tel {
+    transition-property: width, border-color;
+    transition-duration: 1.5s, 5s;
+    transition-timing-function: linear, cubic-bezier(0.19, 1, 0.22, 1);
+
+    width: 100%;
+    border-color: #ced4da;
+}
+
+#contact:hover #comment {
+    transition-property: height, opacity;
+    transition-duration: 1.5s, 5s;
+    transition-timing-function: linear, cubic-bezier(0.19, 1, 0.22, 1);
+
+    height: 263px;
+    opacity: 1;
+}
